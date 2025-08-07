@@ -7,6 +7,7 @@
     <persistence-unit name="MyTest">
         <!-- Add all of your model classes here -->
         <class>mydomain.model.Person</class>
+        <class>mydomain.model.Address</class>
         <exclude-unlisted-classes />
         <properties>
             <!-- Update these datastore details if different -->
@@ -18,6 +19,7 @@
 
             <property name="datanucleus.schema.autoCreateAll" value="true"/>
             <property name="datanucleus.schema.generateDatabase.mode" value="drop-and-create"/>
+            <property name="datanucleus.cache.level2.type" value="none"/>
         </properties>
     </persistence-unit>
 
